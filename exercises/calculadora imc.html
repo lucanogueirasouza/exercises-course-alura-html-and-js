@@ -1,0 +1,64 @@
+<meta charset="UTF-8"> 
+
+<h1>CALCULADORA DE IMC</h1>
+
+<script> 
+    function pulaLinha() { 
+        document.write(
+            "<br><br>"
+        );
+    }
+
+    function calcularImc(nome, peso, altura) { 
+        resultado = peso / (altura * altura)
+        return (
+            nome + ", Seu imc é: " + resultado
+        );
+    }
+
+    alert(
+        "Prossiga para calcular seu imc!"
+    );
+
+
+    var nome = prompt(
+        "Digite seu nome: "
+    )
+
+    var pesoPessoa = parseFloat(prompt(
+        nome + ", Digite seu peso: "
+    ));
+
+    var alturaPessoa = parseFloat(prompt(
+        nome + ", Digite sua altura: "
+    ));
+
+    imc = calcularImc(nome, pesoPessoa, alturaPessoa)
+    resultado = pesoPessoa / (alturaPessoa * alturaPessoa)
+
+    function mensagem(resultado) { 
+        if (resultado < 18.5) {
+            return (
+                "PESO ABAIXO"
+            );
+        } else if (resultado > 18.5 && resultado < 35) {
+            return (
+                "PESO EXECELENTE"
+            );
+        } else {
+            return (
+                "PESO ACIMA"
+            );
+        }
+    }
+
+    mensagemResultado = mensagem(resultado)
+
+    document.write(mensagemResultado)
+    
+    pulaLinha()
+
+    document.write(imc)
+    
+</script>
+

@@ -1,0 +1,37 @@
+<meta charset="UTF-8"> 
+
+<script>
+    function verificarAcerto(numeroPessoa, numeroRandom) { 
+        var numeroRandom = Math.round(Math.random() * 11)
+        
+        if (numeroPessoa == numeroRandom) {
+            alert(
+                "ACERTOUUUU! :)"
+            );
+        } else {
+            alert(
+                "Errou... Tente novamente.\nO número é: " + numeroRandom
+            );
+        }
+    }
+
+    function pulaLinha() { 
+        document.write(
+            "<br><br>"
+        );
+    }
+
+    var numeroRandom = Math.round(Math.random() * 11)
+    var numeroPessoa = parseInt(prompt(
+        "Digite um numero"
+    ))
+
+    if (numeroPessoa > 10 || numeroPessoa < 0) {
+        alert(
+            "Aceitamos valores de 0-10. Tente Novamente"
+        )
+        exit()
+    }
+
+    verificarAcerto(numeroPessoa, numeroRandom)
+</script>

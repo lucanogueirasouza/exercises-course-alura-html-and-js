@@ -1,0 +1,65 @@
+<meta charset="UTF-8"> 
+
+<h1>BRASILEIRÃO</h1>
+
+<script>
+    function pulaLinha() { 
+        document.write(
+            "<br>"
+        );
+    }
+
+    function calcularPontuacao(time, vitorias, empates) { 
+        var pontos = (vitorias * 3) + empates;
+        return "A pontuação do '" + time + "', foi: " + pontos + " Pontos.";
+    }
+
+    function verficarMelhora(pontosAtras, pontosAgora) { 
+        if (pontosAgora > pontosAtras) {
+            return (
+                "SEU TIME MELHOROU! IEBAAAA"
+            );
+        }
+
+        else if (pontosAgora == pontosAtras) {
+            return (
+                "Seu time foi IGUAL à pontuação do ano passado... Melhor que nada. :)"
+            );
+        } 
+
+        else {
+            return (
+                "Seu time foi pior que ano passado..."
+            );
+        }
+    }
+
+    var pontosAnoPassado = parseInt(prompt(
+        "Digite a pontuação do seu time ano passado: "
+    ));
+
+    var time = prompt(
+        "Digite o nome do seu Time: "
+    );
+
+    var vitorias = parseInt(prompt(
+        "Digite a qtd de vitorias do seu time: "
+    ));
+
+    var empates = parseInt(prompt(
+        "Digite a qtd de empates do seu time: "
+    ));
+
+    var pontos = (vitorias * 3) + empates;
+    resultado = calcularPontuacao(time, vitorias, empates);
+    resultadoPontuacao = verficarMelhora(pontosAnoPassado, pontos);
+    document.write(
+        resultadoPontuacao
+    );
+
+    pulaLinha();
+
+    document.write(
+        resultado
+    );
+</script>
