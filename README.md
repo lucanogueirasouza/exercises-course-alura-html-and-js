@@ -1,1 +1,5 @@
-# exercises-course-alura-html-and-js
+BR - Exercícios do curso de HTML & JS do Alura
+
+#
+
+US - Alura HTML & JS Course Exercises
