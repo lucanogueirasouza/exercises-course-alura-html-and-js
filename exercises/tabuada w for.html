@@ -1,0 +1,31 @@
+<meta charset="UTF-8"> 
+
+<script>
+    function pularLinha() { 
+        document.write(
+            "<br><br>"
+        )
+    }
+    while (true) {
+
+        var verOutra = prompt(
+            "Deseja ver tabuada? [S/N]: "
+        )
+
+        if (verOutra == "S" || verOutra == "s") {
+            
+            var numero = parseInt(prompt(
+                "Digite a tabuada do numero que deseja: "
+            ))
+
+            for (var contador = 0; contador < 11; contador++) {
+                alert(
+                    contador + " * " + numero + " = " + contador * numero 
+                )
+        }        
+        } else {
+           break 
+        }
+    }   
+</script>
+

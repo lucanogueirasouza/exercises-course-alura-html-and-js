@@ -1,0 +1,33 @@
+<meta charset="UTF-8"> 
+
+<script> 
+    function pularLinha() { 
+        document.write(
+            "<br><br>"
+        )
+    }
+
+    const qtdPessoas = parseInt(prompt(
+        "Digite a quantidade de pessoas que voce tem na familia: "
+    ))
+    totalIdades = 0
+    contador = 0
+
+    while (contador < qtdPessoas) {
+        var idades = parseInt(prompt(
+            "Digite a idade"
+        ))
+        contador++
+        totalIdades += idades
+    }
+
+    resultado = totalIdades / 4
+
+    alert(
+        "A média é: " + Math.round(resultado) + " Anos"
+        )
+
+    
+
+    
+</script>
